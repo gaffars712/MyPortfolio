@@ -1,0 +1,317 @@
+body {
+    background-color: #E3FDFD;
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar1 {
+    background-color: #66BFBF;
+    position: fixed;
+    top: "0";
+    padding: 15px;
+    width: 100%;
+}
+
+.navbar1-ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar1-a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.navbar1-li {
+    display: inline;
+    margin: 0 50px 0 10px;
+}
+
+.navbar1-h1 {
+    float: left;
+    margin: 0px 0 0 0;
+    padding: 0;
+    font-weight: 900;
+}
+
+.h1-hadding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 50rem;
+    background-color: #E3FDFD;
+    margin: 0;
+    color: #66BFBF;
+}
+
+.innerdiv01 {
+    transform: rotate(0deg);
+}
+
+.innerdiv-hadding {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 6rem;
+    font-family: 'Lumanosimo';
+}
+.innerdiv-hading1{font-size:1.9rem ;
+    margin: -20px 0 0 0 ;
+    padding: 0;}
+.imgdiv{ 
+    width: 14rem;
+    border-radius: 80%;
+}
+.nd2componentdiv{ 
+    height: 50rem;
+    display: flex;
+    width: 100%;
+    text-align: center;}
+.imgdiv1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    }
+.titleh1{
+    margin: 0.5rem 0 0 0;
+}
+.titleh1-01{
+    color: #66BFBF;
+    font-weight: bolder;
+}
+.titledive-01{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+
+}
+.titlediv{
+   width: 50%;
+   
+
+
+}
+.titledive-p{
+    font-weight: 500;
+    text-align: justify;
+   
+}
+.nd3rdcomponentdiv{
+    width: 100%;
+    height: 50rem;
+    padding-top: 15rem;
+}
+.title3rdcomponent{
+    text-align: center;
+    color: #42a8a8;color: #42a8a8;
+    font-size: 2rem;
+    transition: text-decoration 1s ease-in-out;
+}
+.title3rdcomponent:hover{
+    text-decoration: underline;
+
+}
+.educationdiv{
+    width: 100%;
+    
+}
+.educationdive01{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.st1steducationdiv{
+    width: 20%;
+    margin: 2rem 4.8rem ;
+    padding: 1rem;
+    color: #42a8a8;
+}
+.st1steducationdiv-01{
+    width: 20%;
+    margin: 2rem 4.8rem ;
+    padding: 1rem;
+    color: #42a8a8;
+}
+.st1steducationdiv, strong{
+    font-weight: bolder;
+}
+.educationper{
+    color: black;
+    font-weight: bolder;
+}
+.st1steducationdiv:hover{
+    background-color: white;
+    width: 25%;
+    font-size: 18px;
+}
+
+.educationper:hover {
+    color: red;
+}
+.educationper1 {
+    width: 100%;
+    background-color: rgb(13, 136, 13);
+    border-radius: 5%;
+    text-align: center;
+    
+    opacity: 0; /* Start with 0 opacity, making it invisible */
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Change the opacity on hover to make it visible */
+  .educationper1:hover {
+    
+    opacity: 1;
+  }
+
+.projectanchore{
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    
+}
+footer{
+    margin: 0;
+    padding: 0;
+    background-color: #66BFBF;
+}
+.footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+height: auto;
+padding: 1rem 1rem 0 1rem;}
+.footer-ul{
+    text-decoration:none;
+}
+.footer-li{
+    display: inline;
+   margin: 1rem 0 0 0rem;
+
+}
+.footer-a{
+    margin: 1rem;
+
+}
+.footer-img{
+    width: 2rem;
+    border-radius: 50%;
+
+}
+.footer-copy{
+    color: white;
+    text-align: right;
+    padding: 1rem;
+    font-size: 10px;
+
+}
+
+
+
+
+
+/* responsive*/
+
+@media (max-width: 768px) {
+    /* Navbar styles */
+    .navbar1-ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar1-li {
+        margin: 10px 0;
+    }
+
+    /* Main heading styles */
+    .h1-hadding {
+        font-size: 4rem;
+        height: 30rem;
+    }
+
+    .innerdiv-hadding1 {
+        font-size: 1.5rem;
+    }
+
+    .imgdiv {
+        width: 10rem;
+    }
+
+    /* Education styles */
+    .st1steducationdiv, .st1steducationdiv-01 {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .educationper:hover {
+        color: black;
+    }
+
+    /* Footer styles */
+    .footer-li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chat gpt */
+/* Existing styles */
+
+/* Add hover animation for the navbar links */
+.navbar1-li:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Add hover animation for the main heading */
+  /* .h1-hadding:hover {
+    color: #42a8a8;
+    transition: color 0.2s ease-in-out;
+  } */
+  
+  /* Add hover animation for the image div */
+  .imgdiv:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  /* Add hover animation for the education divs */
+  .st1steducationdiv:hover {
+    background-color: white;
+    width: 25%;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in-out, width 0.2s ease-in-out, font-size 0.2s ease-in-out;
+  }
+  
+  .educationper:hover {
+    color: red;
+    transition: color 0.2s ease-in-out;
+  }
+  

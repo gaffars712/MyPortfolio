@@ -160,7 +160,7 @@ body {
     border-radius: 5%;
     text-align: center;
     
-    opacity: 0; /* Start with 0 opacity, making it invisible */
+    opacity: 0.2; /* Start with 0 opacity, making it invisible */
     transition: opacity 0.2s ease-in-out;
   }
   

@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaffar's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- Add Font Awesome CSS link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-alpha3/css/all.min.css" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
+    <script>
+        const texts = [
+            { element: 'id1st', text: "I'm Gaffar" },
+            { element: 'id2nd', text: 'a Website developer' }
+        ];
+        let index = 0;
+        let charIndex = 0;
+        let currentText = '';
+        let currentElement;
+    
+        function type() {
+            if (index < texts.length) {
+                currentElement = document.getElementById(texts[index].element);
+                currentText = texts[index].text;
+    
+                if (charIndex < currentText.length) {
+                    currentElement.innerHTML += currentText[charIndex];
+                    charIndex++;
+                    setTimeout(type, 100); // Typing speed
+                } else {
+                    charIndex = 0;
+                    index++;
+                    setTimeout(type, 500); // Delay before typing the next line
+                }
+            }
+        }
+    
+        window.onload = type;
+    </script>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar1">
         <div class="container">
             <a class="navbar-brand navbar1-h1" href="./index.html">Welcome</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -24,16 +57,20 @@
                     <li class="navbar1-li tooltip-li01" data-bs-toggle="tooltip" title="Home" data-bs-placement="top">
                         <a class="navbar1-a" href="#Home"><i class="fas fa-home"></i></a>
                     </li>
-                    <li class="navbar1-li tooltip-li02" data-bs-toggle="tooltip" title="About Me" data-bs-placement="top">
+                    <li class="navbar1-li tooltip-li02" data-bs-toggle="tooltip" title="About Me"
+                        data-bs-placement="top">
                         <a class="navbar1-a" href="#About-Me"><i class="fas fa-address-card"></i></a>
                     </li>
-                    <li class="navbar1-li tooltip-li03" data-bs-toggle="tooltip" title="Education" data-bs-placement="top">
+                    <li class="navbar1-li tooltip-li03" data-bs-toggle="tooltip" title="Education"
+                        data-bs-placement="top">
                         <a class="navbar1-a" href="#Education"><i class="fas fa-school"></i></a>
                     </li>
-                    <li class="navbar1-li tooltip-li04" data-bs-toggle="tooltip" title="Projects" data-bs-placement="top">
+                    <li class="navbar1-li tooltip-li04" data-bs-toggle="tooltip" title="Projects"
+                        data-bs-placement="top">
                         <a class="navbar1-a" href="#Projects"><i class="fas fa-list-check"></i></a>
                     </li>
-                    <li class="navbar1-li tooltip-li05" data-bs-toggle="tooltip" title="Contact Me" data-bs-placement="top">
+                    <li class="navbar1-li tooltip-li05" data-bs-toggle="tooltip" title="Contact Me"
+                        data-bs-placement="top">
                         <a class="navbar1-a" href="#Contact"><i class="fas fa-address-book"></i></a>
                     </li>
                 </ul>
@@ -41,90 +78,179 @@
         </div>
     </nav>
     <div class="h1-hadding" id="Home">
-        <div class="innerdiv01" >
+        <!-- <div class="innerdiv01">
             <div class="innerdiv-hadding" id="id1st">I'm Gaffar</div>
-            <div class="innerdiv-hading1 ">a <span style="text-decoration-line: underline;">Web</span>site developer</div>
+            <div class="innerdiv-hading1 ">a <span style="text-decoration-line: underline;">Web</span>site developer
+            </div>
+        </div> -->
+        <div class="innerdiv01">
+            <div class="innerdiv-hadding" id="id1st"></div>
+            <div class="innerdiv-hading1" id="id2nd"></div>
         </div>
     </div>
     <div class="nd2componentdiv" id="About-Me">
         <div>
             <div class="imgdiv1">
-                <img src="./IMG_20211115_163059.jpg" alert="My Passport Size Img" class="imgdiv">
+                <img src="./profile_img.jpg" alert="My Passport Size Img" class="imgdiv">
             </div>
             <div class="titleh1">
                 <h1 class="titleh1-01">Hello</h1>
             </div>
             <div class="titledive-01">
-            <div class="titlediv">
-                <div class="titledive-p"> Welcome to my portfolio website! I am Shaikh Gaffar a passionate web developer with a flair for crafting captivating online experiences. Here, you'll find a showcase of my innovative projects and a glimpse into my skills in front-end and back-end development. Let's embark on a digital journey together!</div>
+                <div class="titlediv">
+                    <div class="titledive-p"> Welcome to my portfolio website! I am Shaikh Gaffar a passionate web
+                        developer with a flair for crafting captivating online experiences. Here, you'll find a showcase
+                        of my innovative projects and a glimpse into my skills in front-end and back-end development.
+                        Let's embark on a digital journey together!</div>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <div class="nd3rdcomponentdiv" id="Education">
         <div class="title3rdcomponent"><strong>Education</strong></div>
-        <div class="educationdiv" >
+        <div class="educationdiv">
             <div class="educationdive01">
-            <div class="st1steducationdiv"><strong>    Bachelor Of Computer Science (BSC-CS) </strong><div>Rajiv Gandhi Collage Of Computer Science Aurangabad</div><div><strong  class="educationper" >2020-2023</strong></div><div><strong class="educationper">Percentage:- 71.23 </strong></div></div>
-            <div class="st1steducationdiv"><strong>    12th (HSC) </strong><div> Shri Grishneshwar Vidyalaya Khuldabad</div><div><strong class="educationper" >2019-2020</strong></div><div><strong class="educationper">Percentage:- 65.38 </strong></div></div>
-        </div>
-        <div class="educationdive01">
-            <div class="st1steducationdiv"><strong>    10th (SSC) </strong><div>Shri Grishneshwar Vidyalaya Khuldabad</div><div><strong  class="educationper" >    2017-2018</strong></div><div><strong class="educationper">Percentage:- 63.80 </strong></div></div>
-            <div class="st1steducationdiv"><strong>    MS-CIT </strong><div> MSBET</div><div><strong class="educationper" >2018</strong></div><div><strong class="educationper">Percentage:- 97 </strong></div></div>
-        </div>
-        <div class="educationdive01">
-            <div class="st1steducationdiv"><strong>    English Typing (30wps) </strong><div>MSBET</div><div><strong  class="educationper" >    2019</strong></div><div><strong class="educationper">Percentage:- 80 </strong></div></div>
-            <div class="st1steducationdiv"><strong>    Tally ERP 9 </strong><div> MSBET</div><div><strong class="educationper" >2021</strong></div><div><strong class="educationper">Percentage:- 89.7 </strong></div></div>
-        </div>
+                <div class="st1steducationdiv"><strong> Bachelor Of Computer Science (BSC-CS) </strong>
+                    <div>Rajiv Gandhi Collage Of Computer Science Aurangabad</div>
+                    <div><strong class="educationper">2020-2023</strong></div>
+                    <div><strong class="educationper">Percentage:- 71.23 </strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> 12th (HSC) </strong>
+                    <div> Shri Grishneshwar Vidyalaya Khuldabad</div>
+                    <div><strong class="educationper">2019-2020</strong></div>
+                    <div><strong class="educationper">Percentage:- 65.38 </strong></div>
+                </div>
+            </div>
+            <div class="educationdive01">
+                <div class="st1steducationdiv"><strong> 10th (SSC) </strong>
+                    <div>Shri Grishneshwar Vidyalaya Khuldabad</div>
+                    <div><strong class="educationper"> 2017-2018</strong></div>
+                    <div><strong class="educationper">Percentage:- 63.80 </strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> MS-CIT </strong>
+                    <div> MSBET</div>
+                    <div><strong class="educationper">2018</strong></div>
+                    <div><strong class="educationper">Percentage:- 97 </strong></div>
+                </div>
+            </div>
+            <div class="educationdive01">
+                <div class="st1steducationdiv"><strong> English Typing (30wps) </strong>
+                    <div>MSBET</div>
+                    <div><strong class="educationper"> 2019</strong></div>
+                    <div><strong class="educationper">Percentage:- 80 </strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> Tally ERP 9 </strong>
+                    <div> MSBET</div>
+                    <div><strong class="educationper">2021</strong></div>
+                    <div><strong class="educationper">Percentage:- 89.7 </strong></div>
+                </div>
+            </div>
         </div>
 
     </div>
     <div class="nd3rdcomponentdiv" id="Projects">
-        <div class="title3rdcomponent" > <strong>Projects</strong></div>
+        <div class="title3rdcomponent"> <strong>Projects</strong></div>
         <div class="educationdiv">
             <div class="educationdive01">
-            <div class="st1steducationdiv"><strong>    Project - 01 </strong><div>HTML, CSS Portfolio Web</div><div class="educationper1"><strong ><a href="./index.html" class="projectanchore"> Go To Project</a></strong></div></div>
-            <div class="st1steducationdiv"><strong>    Project - 02 </strong><div>HTML, CSS, JS and React Application NewsApp</div><div class="educationper1"><strong ><a target="_blank" href="https://github.com/gaffars712/firstProject15july" class="projectanchore"> Go To Project</a></strong></div></div>
-            
+                <div class="st1steducationdiv"><strong> Project - 01 </strong>
+                    <div>HTML, CSS Portfolio Web</div>
+                    <div class="educationper1"><strong><a href="./index.html" class="projectanchore"> Go To
+                                Project</a></strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> Project - 02 </strong>
+                    <div>HTML, CSS, JS and React Application NewsApp</div>
+                    <div class="educationper1"><strong><a target="_blank"
+                                href="https://github.com/gaffars712/firstProject15july" class="projectanchore"> Go To
+                                Project</a></strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> Project - 03 </strong>
+                    <div>React, MIUI, API Youtube Clone</div>
+                    <subtitle style="font-size: 12px;">Note:Click On Logo</subtitle>
+                    <div class="educationper1"><strong><a href="https://gaffars712.github.io/youtubeclone/"
+                                class="projectanchore"> Go To Project</a></strong></div>
+                </div>
+
             </div>
             <div class="educationdive01">
-                <div class="st1steducationdiv"><strong>    Project - 03 </strong><div>React, MIUI, API Youtube Clone</div><subtitle style="font-size: 12px;">Note:Click On Logo</subtitle><div class="educationper1"><strong ><a href="https://gaffars712.github.io/youtubeclone/" class="projectanchore"> Go To Project</a></strong></div></div>
-                    <div></div>                
+
+                <div class="st1steducationdiv"><strong> Project - 04 </strong>
+                    <div>Next.js, Bootstrap CSS, Strapi CMS, Real Estate WebSite</div>
+                    <subtitle style="font-size: 12px;">At SDLC CORP</subtitle>
+                    <div class="educationper1"><strong><a href="http://3.29.255.21/" class="projectanchore"
+                                target="_blank"> Go To Project</a></strong></div>
                 </div>
+                <div class="st1steducationdiv"><strong> Project - 05 </strong>
+                    <div>React.js, Node.js, CSS3, Policy Managment Project</div>
+                    <subtitle style="font-size: 12px;">At SDLC CORP</subtitle>
+                    <div class="educationper1"><strong><a target="_blank" href="https://policyconnect.org/org/carroll-isd"
+                                class="projectanchore"> Go To Project</a></strong></div>
+                </div>
+                <div class="st1steducationdiv"><strong> Project - 06 </strong>
+                    <div>React.js, Tailwind CSS, BlockChain Project</div>
+                    <subtitle style="font-size: 12px;">At SDLC CORP</subtitle>
+                    <div class="educationper1"><strong><a target="_blank" href="https://www.bandogadvisor.com/collection" class="projectanchore"
+                                target="_blank"> Go To Project</a></strong></div>
+                </div>
+            </div>
+            <div class="educationdive01">
+
+            </div>
         </div>
     </div>
-    <div  class="nd3rdcomponentdiv" id="Contact">
-        <div class="title3rdcomponent" > <strong>Contact Me</strong></div>
+    <div class="nd3rdcomponentdiv" id="Contact">
+        <div class="title3rdcomponent"> <strong>Contact Me</strong></div>
         <div class="educationdiv">
             <div class="educationdive01">
-            <div class="st1steducationdiv-01"><strong style="font-size: 20px;">  Email </strong><div style="font-size: 15px; text-decoration-line: underline; color: black; font-weight: bolder;"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTKWVRbmbVHQqsJdknXMnGmxqFFBQKndfWFZrlWlRdSnWTkcbDGdSMTJHXfXsnxgntCPlq" target="_blank" style="color: black;"> gaffars712@gmail.com </a></div></div>
-            <div class="st1steducationdiv-01"><strong style="font-size: 20px;">  Phone </strong><div style="font-size: 15px; text-decoration-line: none; color: black; font-weight: bolder;"> +91 94219 95521 </div></div>
-            
+                <div class="st1steducationdiv-01"><strong style="font-size: 20px;"> Email </strong>
+                    <div style="font-size: 15px; text-decoration-line: underline; color: black; font-weight: bolder;"><a
+                            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTKWVRbmbVHQqsJdknXMnGmxqFFBQKndfWFZrlWlRdSnWTkcbDGdSMTJHXfXsnxgntCPlq"
+                            target="_blank" style="color: black;"> gaffars712@gmail.com </a></div>
+                </div>
+                <div class="st1steducationdiv-01"><strong style="font-size: 20px;"> Phone </strong>
+                    <div style="font-size: 15px; text-decoration-line: none; color: black; font-weight: bolder;"> +91
+                        94219 95521 </div>
+                </div>
+
             </div>
             <div class="educationdive01">
-                <div class="st1steducationdiv-01"><strong style="font-size: 20px;">  Address </strong><div style="font-size: 15px; text-decoration-line: none; color: black; font-weight: bolder;"> Old State Bank Road Khuldabad Aurangabad </div></div>
-                <div class="st1steducationdiv-01"><strong style="font-size: 20px;">   </strong><div style="font-size: 15px; text-decoration-line: none;">  </div></div>
-                
+                <div class="st1steducationdiv-01"><strong style="font-size: 20px;"> Address </strong>
+                    <div style="font-size: 15px; text-decoration-line: none; color: black; font-weight: bolder;"> Old
+                        State Bank Road Khuldabad Aurangabad </div>
                 </div>
+                <div class="st1steducationdiv-01"><strong style="font-size: 20px;"> </strong>
+                    <div style="font-size: 15px; text-decoration-line: none;"> </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
     <footer>
         <div class="footer-div">
-        <ul class="footer-ul">
-            <li class="footer-li"><a class="footer-a" href="https://www.linkedin.com/in/gaffar-shaikh-6b7610244/" target="_blank"><img class="footer-img" src="./linkeding.png" alert="Linkeding Img"></a></li>
-            <li class="footer-li"><a class="footer-a" href="https://www.instagram.com/gaffars_21/?hl=en" target="_blank"><img class="footer-img" src="./instagram.png" alert="Linkeding Img"></a></li>
-            <li class="footer-li"><a class="footer-a" href="https://www.facebook.com/profile.php?id=100079968602595" target="_blank"><img class="footer-img" src="./faceboooke.png" alert="Linkeding Img"></a></li>
-            <li class="footer-li"><a class="footer-a" href="https://twitter.com/gaffars_21" target="_blank"><img class="footer-img" src="./twiter.png" alert="Linkeding Img"></a></li>
-        </ul>
-    </div>
-    <div class="footer-copy">
-        <h6>© 2023 Shaikh Gaffar. All rights reserved.</h6>
-    </div>
+            <ul class="footer-ul">
+                <li class="footer-li"><a class="footer-a" href="https://www.linkedin.com/in/gaffar-shaikh-6b7610244/"
+                        target="_blank"><img class="footer-img" src="./linkeding.png" alert="Linkeding Img"></a></li>
+                <li class="footer-li"><a class="footer-a" href="https://www.instagram.com/gaffars_21/?hl=en"
+                        target="_blank"><img class="footer-img" src="./instagram.png" alert="Linkeding Img"></a></li>
+                <li class="footer-li"><a class="footer-a" href="https://www.facebook.com/profile.php?id=100079968602595"
+                        target="_blank"><img class="footer-img" src="./faceboooke.png" alert="Linkeding Img"></a></li>
+                <li class="footer-li"><a class="footer-a" href="https://twitter.com/gaffars_21" target="_blank"><img
+                            class="footer-img" src="./twiter.png" alert="Linkeding Img"></a></li>
+            </ul>
+        </div>
+        <div class="footer-copy">
+            <h6>© 2023 Shaikh Gaffar. All rights reserved.</h6>
+        </div>
     </footer>
     <!-- Script for Font Awesome -->
     <script src="https://kit.fontawesome.com/21e5e9ed1b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="/index.js"></script>
 </body>
+
 </html>
+
+
+
